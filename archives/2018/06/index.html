@@ -81,7 +81,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="宋先生的主页" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="宋先生的小屋" type="application/atom+xml" />
 
 
 
@@ -90,13 +90,13 @@
 
 <meta name="description" content="原谅不美好,忘掉小烦恼">
 <meta property="og:type" content="website">
-<meta property="og:title" content="宋先生的主页">
+<meta property="og:title" content="宋先生的小屋">
 <meta property="og:url" content="http://yoursite.com/archives/2018/06/index.html">
-<meta property="og:site_name" content="宋先生的主页">
+<meta property="og:site_name" content="宋先生的小屋">
 <meta property="og:description" content="原谅不美好,忘掉小烦恼">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="宋先生的主页">
+<meta name="twitter:title" content="宋先生的小屋">
 <meta name="twitter:description" content="原谅不美好,忘掉小烦恼">
 
 
@@ -120,7 +120,7 @@
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      labels: {"input_placeholder":"java","hits_empty":"没有找到与 [${query}] 相关的内容","hits_stats":"${hits}条相关记录,共耗时 ${time} ms"}
     }
   };
 </script>
@@ -133,7 +133,7 @@
 
 
 
-  <title>归档 | 宋先生的主页</title>
+  <title>归档 | 宋先生的小屋</title>
   
 
 
@@ -163,7 +163,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">宋先生的主页</span>
+        <span class="site-title">宋先生的小屋</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -229,9 +229,48 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -626,6 +665,19 @@
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
