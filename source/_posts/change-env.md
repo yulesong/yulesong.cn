@@ -1,13 +1,14 @@
 ---
 title: hexo系列问题之我们换了电脑怎么办
 date: 2019-05-15 11:04:57
-tags:
+tags: hexo
 ---
 
 这个问题是我刚开始建站的时候就想到的问题，只是一直没时间做这些，最近有点时间了，处理一下这个问题    
 
 ## 问题  
 我们如果换了电脑怎么办？我们把hexo文件从一个电脑cope到另外一个电脑吗?答案肯定不是这样的，因为这里面有好多依赖包，好几万个文件呢，这样显然不合理    
+<!--more-->
     
 ## 解决方案
 我们初步的解决方案是把我们的文件提交到git上，利用git来管理它，我是这样解决的：    
@@ -64,7 +65,7 @@ git clone -b hexo https://github.com/yourname/xxx.github.io.git
 12.这样做完了以后，每次写完博客发布之后不要忘了还要git push把源文件推到分支上。
 
 ``` bash
-原文链接：https://blog.csdn.net/wxl1555/article/details/79293159 
+原文链接：(https://blog.csdn.net/wxl1555/article/details/79293159) 
 ```
 
        
