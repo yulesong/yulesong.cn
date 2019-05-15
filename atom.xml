@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-15T02:14:49.156Z</updated>
+  <updated>2019-05-15T03:55:03.697Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo系列问题之我们换了电脑怎么办</title>
+    <link href="http://yoursite.com/2019/05/15/change-env/"/>
+    <id>http://yoursite.com/2019/05/15/change-env/</id>
+    <published>2019-05-15T03:04:57.000Z</published>
+    <updated>2019-05-15T03:55:03.697Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个问题是我刚开始建站的时候就想到的问题，只是一直没时间做这些，最近有点时间了，处理一下这个问题    </p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>我们如果换了电脑怎么办？我们把hexo文件从一个电脑cope到另外一个电脑吗?答案肯定不是这样的，因为这里面有好多依赖包，好几万个文件呢，这样显然不合理    </p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>我们初步的解决方案是把我们的文件提交到git上，利用git来管理它，我是这样解决的：<br>在现有的XXX.github.io项目上创建一个分支来管<br>1.克隆gitHub上的XXX.github.io项目的文件到本地 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/yourname/xxx.github.io.git</span><br></pre></td></tr></table></figure><p>2.删除文件夹里除了.git的其他所有文件<br>3.把hexo项目文件下的所有文件全部复制过来<br>4.里面应该有一个叫.gitignore的文件，如果没有就输入 touch .gitignore，创建一个<br>5..gitignore文件里应该是这些内容 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store </span><br><span class="line">Thumbs.db </span><br><span class="line">db.json </span><br><span class="line">*.<span class="built_in">log</span> </span><br><span class="line">node_modules/ </span><br><span class="line">public/ </span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure><p>6.创建一个叫hexo的分支并切换到这个分支上<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b hexo</span><br></pre></td></tr></table></figure></p><p>7.提交复制过来的文件到暂存区<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br></pre></td></tr></table></figure></p><p>8.提交<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"新建分支资源文件"</span></span><br></pre></td></tr></table></figure></p><p>9.推送分支到github<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --<span class="built_in">set</span>-upstream origin hexo</span><br></pre></td></tr></table></figure></p><p>到这一步我们就基本上搞定了，以后再跟新了博客就直接 git push就可以了，hexo的操作跟以前一样不变。 </p><p>10.今后无论什么时候想要在其他电脑上面用hexo写博客，就直接把创建的分支克隆下来，npm install安装依赖之后就可以用了。<br>克隆分支的操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b hexo https://github.com/yourname/xxx.github.io.git</span><br></pre></td></tr></table></figure></p><p>11.因为上面创建的是一个名字叫hexo的分支，所以这里-b后面的是hexo，再把后面的gitHub的地址换成你自己的hexo博客的地址就可以了。<br>12.这样做完了以后，每次写完博客发布之后不要忘了还要git push把源文件推到分支上。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原文链接：https://blog.csdn.net/wxl1555/article/details/79293159</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这个问题是我刚开始建站的时候就想到的问题，只是一直没时间做这些，最近有点时间了，处理一下这个问题    &lt;/p&gt;
+&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;我们如果换了电脑怎么
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>HEXO 基本命令使用</title>
