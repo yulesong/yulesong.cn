@@ -1,5 +1,5 @@
 ---
-title: win10-mysql
+title: win10安装MySQL步骤
 date: 2019-05-16 09:51:11
 tags: mysql
 ---
@@ -109,7 +109,7 @@ Config Type选择“Development Machine”，选择此项将使用较小的内�
 
 ![](/img/mysql25.png)
 
-五、测试是否安装成功我们使用MySQL管理软件（Navicat for MySQL）进行连接测试，确保mysql已经可以使用：
+## 三、测试是否安装成功我们使用MySQL管理软件（Navicat for MySQL）进行连接测试，确保mysql已经可以使用：
 
 这里我提供sqlNavicat怎么安装：就是傻瓜安装方法，安装好之后你们会遇到要求注册，直接解压我给你们的破解软件点击一下，在重新打开Navicat就ok拉：
 
