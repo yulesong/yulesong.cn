@@ -1,7 +1,10 @@
 ---
 title: springboot集成swgger2错误解决（No enum constant org.springframework.web.bind.annotation.RequestMethod.Get）
 date: 2019-05-20 16:29:27
-tags: springboot集成swgger2错误解决
+categories：
+- springboot集成swgger2错误解决
+tags: 
+- swgger2
 ---
 
 ## springboot在集成swagger2启动时遇到如下错误：

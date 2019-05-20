@@ -1,8 +1,8 @@
 ---
 title: 关于我
 date: 2018-06-29 18:40:41
-tags:
-- 关于
+categories: 
+- 关于我
 comments: true
 ---
 ## 座右铭 

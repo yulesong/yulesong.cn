@@ -1,7 +1,10 @@
 ---
 title: Spring注解@PathVariable 与 @RequestParam
 date: 2019-05-17 16:42:28
-tags: Spring注解@PathVariable 与 @RequestParam
+categories: 
+- Spring注解@PathVariable 与 @RequestParam
+tags: 
+- Spring注解
 ---
 ## @PathVariable 
 

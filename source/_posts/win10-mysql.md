@@ -1,7 +1,11 @@
 ---
 title: win10安装MySQL步骤
 date: 2019-05-16 09:51:11
-tags: mysql
+categories: 
+- win10安装MySQL步骤
+tags: 
+- mysql
+
 ---
 
 ## 一、下载mysql
