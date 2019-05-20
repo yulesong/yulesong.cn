@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="@ApiOperation和@ApiParam@ApiOperation不是spring自带的注解是swagger里的com.wordnik.swagger.annotations.ApiOperation;">
+<meta name="description" content="@ApiOperation和@ApiImplicitParams@ApiOperation不是spring自带的注解是swagger里的com.wordnik.swagger.annotations.ApiOperation;">
 <meta name="keywords" content="Swagger注解说明">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swagger注解：@ApiOperation与ApiParam使用">
+<meta property="og:title" content="Swagger注解：@ApiOperation与@ApiImplicitParams使用">
 <meta property="og:url" content="http://yoursite.com/2019/05/20/swagger-apiOperation-apiParam/index.html">
 <meta property="og:site_name" content="宋先生的小屋">
-<meta property="og:description" content="@ApiOperation和@ApiParam@ApiOperation不是spring自带的注解是swagger里的com.wordnik.swagger.annotations.ApiOperation;">
+<meta property="og:description" content="@ApiOperation和@ApiImplicitParams@ApiOperation不是spring自带的注解是swagger里的com.wordnik.swagger.annotations.ApiOperation;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-20T02:01:42.915Z">
+<meta property="og:updated_time" content="2019-05-20T02:25:00.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swagger注解：@ApiOperation与ApiParam使用">
-<meta name="twitter:description" content="@ApiOperation和@ApiParam@ApiOperation不是spring自带的注解是swagger里的com.wordnik.swagger.annotations.ApiOperation;">
+<meta name="twitter:title" content="Swagger注解：@ApiOperation与@ApiImplicitParams使用">
+<meta name="twitter:description" content="@ApiOperation和@ApiImplicitParams@ApiOperation不是spring自带的注解是swagger里的com.wordnik.swagger.annotations.ApiOperation;">
 
 
 
@@ -135,7 +135,7 @@
 
 
 
-  <title>Swagger注解：@ApiOperation与ApiParam使用 | 宋先生的小屋</title>
+  <title>Swagger注解：@ApiOperation与@ApiImplicitParams使用 | 宋先生的小屋</title>
   
 
 
@@ -354,7 +354,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Swagger注解：@ApiOperation与ApiParam使用</h1>
+          <h1 class="post-title" itemprop="name headline">Swagger注解：@ApiOperation与@ApiImplicitParams使用</h1>
         
 
         <div class="post-meta">
@@ -435,9 +435,10 @@
       
 
       
-        <h2 id="ApiOperation和-ApiParam"><a href="#ApiOperation和-ApiParam" class="headerlink" title="@ApiOperation和@ApiParam"></a>@ApiOperation和@ApiParam</h2><p>@ApiOperation不是spring自带的注解是swagger里的<br>com.wordnik.swagger.annotations.ApiOperation;</p>
+        <h2 id="ApiOperation和-ApiImplicitParams"><a href="#ApiOperation和-ApiImplicitParams" class="headerlink" title="@ApiOperation和@ApiImplicitParams"></a>@ApiOperation和@ApiImplicitParams</h2><p>@ApiOperation不是spring自带的注解是swagger里的<br>com.wordnik.swagger.annotations.ApiOperation;</p>
 <a id="more"></a>
-<p>@ApiOperation和@ApiParam为添加的API相关注解，个参数说明如下：<br>@ApiOperation(value = “接口说明”, httpMethod = “接口请求方式”, response = “接口返回参数类型”, notes = “接口发布说明”；其他参数可参考源码；<br>@ApiParam(required = “是否必须参数”, name = “参数名称”, value = “参数具体描述”</p>
+<p>@ApiImplicitParams：用在请求的方法上，包含一组参数说明<br>     @ApiImplicitParams：用在请求的方法上，包含一组参数说明<br>     @ApiImplicitParam：用在 @ApiImplicitParams 注解中，指定一个请求参数的配置信息<br>        name：参数名<br>        value：参数的汉字说明、解释<br>        required：参数是否必须传<br>        paramType：参数放在哪个地方<br>            · header –&gt; 请求参数的获取：@RequestHeader<br>            · query –&gt; 请求参数的获取：@RequestParam<br>            · path（用于restful接口）–&gt; 请求参数的获取：@PathVariable<br>            · body（不常用）<br>            · form（不常用）<br>        dataType：参数类型，默认String，其它值dataType=”Integer”<br>        defaultValue：参数的默认值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@ApiImplicitParams(&#123;</span><br><span class="line">    @ApiImplicitParam(name=<span class="string">"mobile"</span>,value=<span class="string">"手机号"</span>,required=<span class="literal">true</span>,paramType=<span class="string">"form"</span>),</span><br><span class="line">    @ApiImplicitParam(name=<span class="string">"password"</span>,value=<span class="string">"密码"</span>,required=<span class="literal">true</span>,paramType=<span class="string">"form"</span>),</span><br><span class="line">    @ApiImplicitParam(name=<span class="string">"age"</span>,value=<span class="string">"年龄"</span>,required=<span class="literal">true</span>,paramType=<span class="string">"form"</span>,dataType=<span class="string">"Integer"</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="实体注解-ApiModel和-ApiModelProperty"><a href="#实体注解-ApiModel和-ApiModelProperty" class="headerlink" title="实体注解 @ApiModel和@ApiModelProperty"></a>实体注解 @ApiModel和@ApiModelProperty</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@ApiModel(<span class="string">"用户"</span>)</span><br><span class="line">public class User &#123;</span><br><span class="line">    @ApiModelProperty(<span class="string">"用户ID"</span>)</span><br><span class="line">    private long id;</span><br><span class="line">    @ApiModelProperty(<span class="string">"用户名"</span>)</span><br><span class="line">    private String name;</span><br><span class="line">    @ApiModelProperty(<span class="string">"生日"</span>)</span><br><span class="line">    private Date birth;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
@@ -746,7 +747,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ApiOperation和-ApiParam"><span class="nav-number">1.</span> <span class="nav-text">@ApiOperation和@ApiParam</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实体注解-ApiModel和-ApiModelProperty"><span class="nav-number">2.</span> <span class="nav-text">实体注解 @ApiModel和@ApiModelProperty</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ApiOperation和-ApiImplicitParams"><span class="nav-number">1.</span> <span class="nav-text">@ApiOperation和@ApiImplicitParams</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实体注解-ApiModel和-ApiModelProperty"><span class="nav-number">2.</span> <span class="nav-text">实体注解 @ApiModel和@ApiModelProperty</span></a></li></ol></div>
             
 
           </div>
