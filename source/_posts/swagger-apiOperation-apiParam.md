@@ -1,18 +1,37 @@
 ---
-title: Swagger注解：@ApiOperation与ApiParam使用
+title: Swagger注解：@ApiOperation与@ApiImplicitParams使用
 date: 2019-05-20 09:45:33
 tags: Swagger注解说明
 ---
-## @ApiOperation和@ApiParam
+## @ApiOperation和@ApiImplicitParams
 
 @ApiOperation不是spring自带的注解是swagger里的 
 com.wordnik.swagger.annotations.ApiOperation;
 
 <!--more-->
 
-@ApiOperation和@ApiParam为添加的API相关注解，个参数说明如下： 
-@ApiOperation(value = “接口说明”, httpMethod = “接口请求方式”, response = “接口返回参数类型”, notes = “接口发布说明”；其他参数可参考源码； 
-@ApiParam(required = “是否必须参数”, name = “参数名称”, value = “参数具体描述”
+@ApiImplicitParams：用在请求的方法上，包含一组参数说明
+     @ApiImplicitParams：用在请求的方法上，包含一组参数说明
+     @ApiImplicitParam：用在 @ApiImplicitParams 注解中，指定一个请求参数的配置信息       
+        name：参数名
+        value：参数的汉字说明、解释
+        required：参数是否必须传
+        paramType：参数放在哪个地方
+            · header --> 请求参数的获取：@RequestHeader
+            · query --> 请求参数的获取：@RequestParam
+            · path（用于restful接口）--> 请求参数的获取：@PathVariable
+            · body（不常用）
+            · form（不常用）    
+        dataType：参数类型，默认String，其它值dataType="Integer"       
+        defaultValue：参数的默认值
+
+``` bash
+@ApiImplicitParams({
+    @ApiImplicitParam(name="mobile",value="手机号",required=true,paramType="form"),
+    @ApiImplicitParam(name="password",value="密码",required=true,paramType="form"),
+    @ApiImplicitParam(name="age",value="年龄",required=true,paramType="form",dataType="Integer")
+})
+```
 
 ## 实体注解 @ApiModel和@ApiModelProperty  
 
