@@ -20,14 +20,20 @@
     <title><![CDATA[Spring注解@PathVariable 与 @RequestParam]]></title>
     <url>%2F2019%2F05%2F17%2Fspring-pathVariable-requestParam%2F</url>
     <content type="text"><![CDATA[@PathVariable当使用@RequestMapping URI template 样式映射时， 即 someUrl/{paramId}, 这时的paramId可通过 @Pathvariable注解绑定它传过来的值到方法的参数上。示例代码： @Controller@RequestMapping(“/owners/{ownerId}”)public class RelativePathUriTemplateController { @RequestMapping(“/pets/{petId}”) public void findPet(@PathVariable(“ownerId”) String ownerId, @PathVariable(“petId”) String petId, Model model) { // implementation omitted }}上面代码把URI template 中变量 ownerId的值和petId的值，绑定到方法的参数上。若方法参数名称和需要绑定的uri template中变量名称不一致，需要在@PathVariable(“name”)指定uri template中的名称。 @RequestParam当URL使用 someUrl?id=xxxxxx, 这时的id可通过 @RequestParam注解绑定它传过来的值到方法的参数上。 @RequestMapping(“/pets”) public void findPet(@RequestParam(“id”) String id) { // implementation omitted}]]></content>
+      <categories>
+        <category>Spring注解@PathVariable 与 @RequestParam</category>
+      </categories>
       <tags>
-        <tag>Spring注解@PathVariable 与 @RequestParam</tag>
+        <tag>Spring注解</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[win10安装MySQL步骤]]></title>
     <url>%2F2019%2F05%2F16%2Fwin10-mysql%2F</url>
     <content type="text"><![CDATA[一、下载mysql1.在浏览器里打开mysql的官网(http://www.mysql.com/)2.进入页面顶部的”Downloads” 3.打开页面底部的“Community(GPL) Downloads” 4.在页面中间的位置找到我们windows上要用的下载页面“MySQL on Windows(Installer &amp; Tools)” 5.选择第一项”MySQL Installer” 6.页面底端找到下载入口“Windows (x86,32-bit), MSI Installer”，点击Download按钮开始下载，共381.4M 注意：MSI格式是指windows的安装程序，下载后直接双击就能进入安装向导的那种，区别于对文件进行解压的安装方式； 7.这个页面告诉询问你是否登录，告诉你登录之后有哪些好处，我们不登录，点击页面底部的“No thanks, just start my download.”按钮进入下载页面 8.开始下载，等待下载完成（由于直接下载速度太慢，之后我用迅雷下载完成的） 9.下载完成 二、安装mysql1.双击下载好的mysql安装文件“mysql-installer-community-5.7.14.0.msi”打开安装程序，打开后需要稍等一下 2.选择安装类型（根据个人需要） 3.我只需要安装mysql server，所以选择最后一项“Custom”，选择Custom之后左边的安装流程和右边的描述文字会改变，然后点击”Next”按钮继续 4.在这里我们需要从安装程序提供的可安装的产品（Products）中选择我们需要的mysql server 我们展开Available Products里的第一项“MySQL Servers”，依次展开其子结点，直到其终端结点，我的操作是64位的，所以选中“MySQL Server 5.7.14 - X64 然后点击绿色的向右箭头，将当前Product移动需要安装的列表，然后在右边展开“MySQL Server 5.7.14 - X64”项，取消“Development Components”的勾选（因为我们只需要安装mysql server），之后点击“Next”按钮进入下一步 5.点击“Execute”（执行）开始安装，安装过程中会显示安装的Progress（进度），等待安装完成后Status会显示Complete，mysql图标前会出现一个绿色的勾，然后点击“Next”按钮进入产品配置界面 6.点击“Next”按钮进入MySQL Server 的配置 Config Type选择“Development Machine”，选择此项将使用较小的内容来运行我们的mysql server，对应小型软件、学习是完全够用的。之后“Next” 在Root Account Password设置数据库root账号的密码，我填的是123456所以程序提醒我密码强度为弱，我们需要牢记这个密码，然后点击“Next” 这里可以设置mysql server的名称和是否开机启动，我把名称改为了“MySQLZzz1”，取消了开机启动，其它的没改，点击“Next” 点击“Next” 此界面将之前设置的配置内容应用到我们的mysql server，点击“Execute”，等待完成就可以了 配置完成，点击“Finish”完成配置环节 7.配置完成后将回到安装程序，我们点击“Next”继续 提示我们安装完成，点击“Finish” 三、测试是否安装成功我们使用MySQL管理软件（Navicat for MySQL）进行连接测试，确保mysql已经可以使用：这里我提供sqlNavicat怎么安装：就是傻瓜安装方法，安装好之后你们会遇到要求注册，直接解压我给你们的破解软件点击一下，在重新打开Navicat就ok拉： Navicat安装百度云地址：http://pan.baidu.com/s/1eSb7qpW 破解Navicat软件百度云地址：http://pan.baidu.com/s/1kVf0QQr 1.打开Navicat for MySQL 2.新建一个连接，填写连接信息：连接名称：用于区分不同的连接，自己命名即可主机名：localhost端口：3306用户名：root密码：123456（之前配置mysql的时候填写的密码） 3.点击“连接测试”按钮，弹出连接成功对话框即表示mysql server已开启 4.之后就是Navicat for MySQL软件的使用另：我们也可以在cmd里，再次输入“net start mysqlzzz1”，若提示“请求的服务已经启动。”表示mysql server已正常启动； 至此，mysql server在windows 10 64位上就安装完成了。 参考链接：https://www.jianshu.com/p/1aba608b21c5]]></content>
+      <categories>
+        <category>win10安装MySQL步骤</category>
+      </categories>
       <tags>
         <tag>mysql</tag>
       </tags>
@@ -36,6 +42,9 @@
     <title><![CDATA[hexo系列问题之我们换了电脑怎么办]]></title>
     <url>%2F2019%2F05%2F15%2Fchange-env%2F</url>
     <content type="text"><![CDATA[这个问题是我刚开始建站的时候就想到的问题，只是一直没时间做这些，最近有点时间了，处理一下这个问题 问题我们如果换了电脑怎么办？我们把hexo文件从一个电脑cope到另外一个电脑吗?答案肯定不是这样的，因为这里面有好多依赖包，好几万个文件呢，这样显然不合理 解决方案我们初步的解决方案是把我们的文件提交到git上，利用git来管理它，我是这样解决的：在现有的XXX.github.io项目上创建一个分支来管1.克隆gitHub上的XXX.github.io项目的文件到本地 1$ git clone https://github.com/yourname/xxx.github.io.git 2.删除文件夹里除了.git的其他所有文件3.把hexo项目文件下的所有文件全部复制过来4.里面应该有一个叫.gitignore的文件，如果没有就输入 touch .gitignore，创建一个5..gitignore文件里应该是这些内容 1234567.DS_Store Thumbs.db db.json *.log node_modules/ public/ .deploy*/ 6.创建一个叫hexo的分支并切换到这个分支上1$ git checkout -b hexo 7.提交复制过来的文件到暂存区1git add --all 8.提交1git commit -m "新建分支资源文件" 9.推送分支到github1git push --set-upstream origin hexo 到这一步我们就基本上搞定了，以后再跟新了博客就直接 git push就可以了，hexo的操作跟以前一样不变。 10.今后无论什么时候想要在其他电脑上面用hexo写博客，就直接把创建的分支克隆下来，npm install安装依赖之后就可以用了。克隆分支的操作1git clone -b hexo https://github.com/yourname/xxx.github.io.git 11.因为上面创建的是一个名字叫hexo的分支，所以这里-b后面的是hexo，再把后面的gitHub的地址换成你自己的hexo博客的地址就可以了。12.这样做完了以后，每次写完博客发布之后不要忘了还要git push把源文件推到分支上。 1原文链接：(https://blog.csdn.net/wxl1555/article/details/79293159)]]></content>
+      <categories>
+        <category>hexo系列问题之我们换了电脑怎么办</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
@@ -44,6 +53,9 @@
     <title><![CDATA[HEXO 基本命令使用]]></title>
     <url>%2F2018%2F06%2F29%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>hexo基本命令</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
