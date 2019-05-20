@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-17T08:48:39.957Z</updated>
+  <updated>2019-05-20T02:01:42.915Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Swagger注解：@ApiOperation与ApiParam使用</title>
+    <link href="http://yoursite.com/2019/05/20/swagger-apiOperation-apiParam/"/>
+    <id>http://yoursite.com/2019/05/20/swagger-apiOperation-apiParam/</id>
+    <published>2019-05-20T01:45:33.000Z</published>
+    <updated>2019-05-20T02:01:42.915Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ApiOperation和-ApiParam"><a href="#ApiOperation和-ApiParam" class="headerlink" title="@ApiOperation和@ApiParam"></a>@ApiOperation和@ApiParam</h2><p>@ApiOperation不是spring自带的注解是swagger里的<br>com.wordnik.swagger.annotations.ApiOperation;</p><a id="more"></a><p>@ApiOperation和@ApiParam为添加的API相关注解，个参数说明如下：<br>@ApiOperation(value = “接口说明”, httpMethod = “接口请求方式”, response = “接口返回参数类型”, notes = “接口发布说明”；其他参数可参考源码；<br>@ApiParam(required = “是否必须参数”, name = “参数名称”, value = “参数具体描述”</p><h2 id="实体注解-ApiModel和-ApiModelProperty"><a href="#实体注解-ApiModel和-ApiModelProperty" class="headerlink" title="实体注解 @ApiModel和@ApiModelProperty"></a>实体注解 @ApiModel和@ApiModelProperty</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@ApiModel(<span class="string">"用户"</span>)</span><br><span class="line">public class User &#123;</span><br><span class="line">    @ApiModelProperty(<span class="string">"用户ID"</span>)</span><br><span class="line">    private long id;</span><br><span class="line">    @ApiModelProperty(<span class="string">"用户名"</span>)</span><br><span class="line">    private String name;</span><br><span class="line">    @ApiModelProperty(<span class="string">"生日"</span>)</span><br><span class="line">    private Date birth;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><table><thead><tr><th style="text-align:left">注解</th><th style="text-align:right">作用域</th><th style="text-align:center">说明</th></tr></thead><tbody><tr><td style="text-align:left">ApiModel</td><td style="text-align:right">实体类名</td><td style="text-align:center">描述实体</td></tr><tr><td style="text-align:left">ApiModelProperty</td><td style="text-align:right">实体属性</td><td style="text-align:center">描述属性</td></tr></tbody></table><p>实际项目中非常需要写文档，提高Java服务端和Web前端以及移动端的对接效率。</p><p>Swagger是当前最好用的Restful API文档生成的开源项目，通过swagger-spring项目</p><p>实现了与SpingMVC框架的无缝集成功能，方便生成spring restful风格的接口文档，</p><p>同时swagger-ui还可以测试spring restful风格的接口功能。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;ApiOperation和-ApiParam&quot;&gt;&lt;a href=&quot;#ApiOperation和-ApiParam&quot; class=&quot;headerlink&quot; title=&quot;@ApiOperation和@ApiParam&quot;&gt;&lt;/a&gt;@ApiOperation和@ApiParam&lt;/h2&gt;&lt;p&gt;@ApiOperation不是spring自带的注解是swagger里的&lt;br&gt;com.wordnik.swagger.annotations.ApiOperation;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Swagger注解说明" scheme="http://yoursite.com/tags/Swagger%E6%B3%A8%E8%A7%A3%E8%AF%B4%E6%98%8E/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring注解@PathVariable 与 @RequestParam</title>
