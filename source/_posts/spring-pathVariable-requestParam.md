@@ -11,12 +11,10 @@ tags:
 当使用@RequestMapping URI template 样式映射时， 即 someUrl/{paramId}, 这时的paramId可通过 @Pathvariable注解绑定它传过来的值到方法的参数上。
 示例代码：
 
-<!--more-->
-
 @Controller  
 @RequestMapping("/owners/{ownerId}")  
 public class RelativePathUriTemplateController {  
-  
+<!--more-->
   @RequestMapping("/pets/{petId}")  
   public void findPet(@PathVariable("ownerId") String ownerId, @PathVariable("petId") String petId, Model model) {      
     // implementation omitted   

@@ -13,9 +13,9 @@ tags:
 1.在浏览器里打开mysql的官网(http://www.mysql.com/)
 2.进入页面顶部的"Downloads"
 
-<!--more-->
-
 ![](/img/mysql1.png)
+
+<!--more-->
 
 3.打开页面底部的“Community(GPL) Downloads”
 

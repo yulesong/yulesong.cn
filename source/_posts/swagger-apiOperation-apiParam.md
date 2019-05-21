@@ -8,25 +8,24 @@ tags:
 ---
 ## @ApiOperation和@ApiImplicitParams
 
-@ApiOperation不是spring自带的注解是swagger里的 
-com.wordnik.swagger.annotations.ApiOperation;
+@ApiOperation不是spring自带的注解是swagger里的com.wordnik.swagger.annotations.ApiOperation;
+
+@ApiImplicitParams：用在请求的方法上，包含一组参数说明
+    @ApiImplicitParam：用在 @ApiImplicitParams 注解中，指定一个请求参数的配置信息       
+    name：参数名
+    value：参数的汉字说明、解释
+    required：参数是否必须传
+    paramType：参数放在哪个地方
 
 <!--more-->
 
-@ApiImplicitParams：用在请求的方法上，包含一组参数说明
-     @ApiImplicitParams：用在请求的方法上，包含一组参数说明
-     @ApiImplicitParam：用在 @ApiImplicitParams 注解中，指定一个请求参数的配置信息       
-        name：参数名
-        value：参数的汉字说明、解释
-        required：参数是否必须传
-        paramType：参数放在哪个地方
-            · header --> 请求参数的获取：@RequestHeader
-            · query --> 请求参数的获取：@RequestParam
-            · path（用于restful接口）--> 请求参数的获取：@PathVariable
-            · body（不常用）
-            · form（不常用）    
-        dataType：参数类型，默认String，其它值dataType="Integer"       
-        defaultValue：参数的默认值
+        · header --> 请求参数的获取：@RequestHeader
+        · query --> 请求参数的获取：@RequestParam
+        · path（用于restful接口）--> 请求参数的获取：@PathVariable
+        · body（不常用）
+        · form（不常用）    
+    dataType：参数类型，默认String，其它值dataType="Integer"       
+    defaultValue：参数的默认值
 
 ``` bash
 @ApiImplicitParams({
