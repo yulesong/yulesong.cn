@@ -13,6 +13,8 @@ tags:
 
 ![](/img/idea-springboot1.png)
 
+<!--more-->
+
 2.CTRL+SHIFT+A–>查找Registry–>找到并勾选compiler.automake.allow.when.app.running如图：
 
 ![](/img/idea-springboot2.png)
