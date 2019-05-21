@@ -822,7 +822,8 @@
 
       
         
-          <h2 id="ApiOperation和-ApiImplicitParams"><a href="#ApiOperation和-ApiImplicitParams" class="headerlink" title="@ApiOperation和@ApiImplicitParams"></a>@ApiOperation和@ApiImplicitParams</h2><p>@ApiOperation不是spring自带的注解是swagger里的<br>com.wordnik.swagger.annotations.ApiOperation;</p>
+          <h2 id="ApiOperation和-ApiImplicitParams"><a href="#ApiOperation和-ApiImplicitParams" class="headerlink" title="@ApiOperation和@ApiImplicitParams"></a>@ApiOperation和@ApiImplicitParams</h2><p>@ApiOperation不是spring自带的注解是swagger里的com.wordnik.swagger.annotations.ApiOperation;</p>
+<p>@ApiImplicitParams：用在请求的方法上，包含一组参数说明<br>    @ApiImplicitParam：用在 @ApiImplicitParams 注解中，指定一个请求参数的配置信息<br>    name：参数名<br>    value：参数的汉字说明、解释<br>    required：参数是否必须传<br>    paramType：参数放在哪个地方</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/05/20/swagger-apiOperation-apiParam/#more" rel="contents">
@@ -1004,6 +1005,7 @@
       
         
           <h2 id="PathVariable"><a href="#PathVariable" class="headerlink" title="@PathVariable"></a>@PathVariable</h2><p>当使用@RequestMapping URI template 样式映射时， 即 someUrl/{paramId}, 这时的paramId可通过 @Pathvariable注解绑定它传过来的值到方法的参数上。<br>示例代码：</p>
+<p>@Controller<br>@RequestMapping(“/owners/{ownerId}”)<br>public class RelativePathUriTemplateController {<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/05/17/spring-pathVariable-requestParam/#more" rel="contents">
@@ -1185,6 +1187,7 @@
       
         
           <h2 id="一、下载mysql"><a href="#一、下载mysql" class="headerlink" title="一、下载mysql"></a>一、下载mysql</h2><p>1.在浏览器里打开mysql的官网(<a href="http://www.mysql.com/" target="_blank" rel="noopener">http://www.mysql.com/</a>)<br>2.进入页面顶部的”Downloads”</p>
+<p><img src="/img/mysql1.png" alt=""></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/05/16/win10-mysql/#more" rel="contents">
