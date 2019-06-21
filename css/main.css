@@ -434,10 +434,6 @@ th {
 td {
   border-bottom-width: 1px;
 }
-html,
-body {
-  height: 100%;
-}
 .container {
   position: relative;
   min-height: 100%;
@@ -1263,7 +1259,13 @@ pre .javascript .function {
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-.use-motion .post-block,
+.use-motion .post-block {
+  margin-bottom: 12px;
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border-radius: 10px 10px 10px 10px;
+}
 .use-motion .pagination,
 .use-motion .comments {
   opacity: 0;
@@ -2065,7 +2067,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cb44bb;
+  background: #bb9c3d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2849,7 +2851,7 @@ img:hover {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 960px;
+  width: 75%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
@@ -2868,8 +2870,8 @@ img:hover {
   padding: 0;
   width: 240px;
   background: #fff;
-  box-shadow: initial;
-  border-radius: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border-radius: 10px 10px 10px 10px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -2909,7 +2911,7 @@ img:hover {
   }
 }
 .container .main-inner {
-  width: 960px;
+  width: 75%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container .main-inner {
@@ -2924,12 +2926,12 @@ img:hover {
 .content-wrap {
   float: right;
   box-sizing: border-box;
-  padding: 40px;
-  width: 700px;
-  background: #fff;
-  min-height: 700px;
+background
+  min-height: 800px;
   box-shadow: initial;
   border-radius: initial;
+  width: calc(100% - 252px);
+  margin-top: -40px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
@@ -3099,7 +3101,6 @@ img:hover {
   opacity: 1;
 }
 .sidebar {
-  margin-left: -100%;
   right: auto;
   bottom: auto;
   -webkit-transform: none;
@@ -3109,8 +3110,8 @@ img:hover {
   width: 240px;
   color: #555;
   background: #fff;
-  box-shadow: initial;
-  border-radius: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border-radius: 10px 10px 10px 10px;
   opacity: 0;
 }
 .sidebar-inner.affix {
@@ -3241,9 +3242,10 @@ img:hover {
     text-align: justify;
   }
 }
-* {
-  cursor: url("http://om8u46rmb.bkt.clouddn.com/sword2.ico"), auto !important;
-}
-:active {
-  cursor: url("http://om8u46rmb.bkt.clouddn.com/sword1.ico"), auto !important;
+.bg_content {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
