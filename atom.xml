@@ -61,6 +61,28 @@
   </entry>
   
   <entry>
+    <title>破解压缩包（Rar、Zip）密码</title>
+    <link href="http://yoursite.com/2019/06/25/break-package/"/>
+    <id>http://yoursite.com/2019/06/25/break-package/</id>
+    <published>2019-06-25T08:51:20.000Z</published>
+    <updated>2019-06-27T09:13:51.714Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>自己加密的文件忘了密码，或者别人的加密文件没有密码该怎么解决呢？下面本文教你如何快速破解压缩包（Rar、Zip）密码的方法，需要的朋友可以参考一下</p><a id="more"></a><h2 id="下载破解工具"><a href="#下载破解工具" class="headerlink" title="下载破解工具"></a>下载破解工具</h2><p>下载Advanced Archive Password Recovery密码读取工具（链接：<a href="https://pan.baidu.com/s/1_qkJt_CCLS9ktoWIa4M8VQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1_qkJt_CCLS9ktoWIa4M8VQ</a> 密码：wti7）</p><h2 id="安装破解工具"><a href="#安装破解工具" class="headerlink" title="安装破解工具"></a>安装破解工具</h2><p>打开archpr.exe（如果报错，或者破解需要注册激活，运行“安装程序.exe”覆盖安装即可）</p><h2 id="选择尝试密码的范围及长度"><a href="#选择尝试密码的范围及长度" class="headerlink" title="选择尝试密码的范围及长度"></a>选择尝试密码的范围及长度</h2><ul><li><p><img src="/img/break-package1.png" alt=""></p></li><li><p><img src="/img/break-package2.png" alt=""></p></li></ul><p>根据实际情况进行勾选，勾选的越多破解时间越长，通常勾选前三项，口令长度可以设置长一些，系统会自动从低长度到高长度尝试</p><h2 id="点击“打开”，选择想要破解的文件"><a href="#点击“打开”，选择想要破解的文件" class="headerlink" title="点击“打开”，选择想要破解的文件"></a>点击“打开”，选择想要破解的文件</h2><ul><li><img src="/img/break-package3.png" alt=""></li></ul><h2 id="点击“开始！”进行破解"><a href="#点击“开始！”进行破解" class="headerlink" title="点击“开始！”进行破解"></a>点击“开始！”进行破解</h2><p>破解成功下方会显示当前口令，输入解压即可</p><ul><li><img src="/img/break-package4.png" alt=""></li></ul><p>最小化窗口耐心等待即可，软件并不会占用太多CPU，不影响正常办公娱乐</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;自己加密的文件忘了密码，或者别人的加密文件没有密码该怎么解决呢？下面本文教你如何快速破解压缩包（Rar、Zip）密码的方法，需要的朋友可以参考一下&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="破解压缩包（Rar、Zip）密码" scheme="http://yoursite.com/categories/%E7%A0%B4%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8C%85%EF%BC%88Rar%E3%80%81Zip%EF%BC%89%E5%AF%86%E7%A0%81/"/>
+    
+    
+      <category term="破解压缩包（Rar、Zip）密码" scheme="http://yoursite.com/tags/%E7%A0%B4%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%8C%85%EF%BC%88Rar%E3%80%81Zip%EF%BC%89%E5%AF%86%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo NexT主题内添加相册功能</title>
     <link href="http://yoursite.com/2019/06/24/next-photos/"/>
     <id>http://yoursite.com/2019/06/24/next-photos/</id>
